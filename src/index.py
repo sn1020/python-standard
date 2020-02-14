@@ -5,8 +5,10 @@ def uncovered_if(var=True):
       return True
 
 def fully_covered():
-    return True;
+    return True
 
 def uncovered():
     return True
 
+def potato():
+    return False

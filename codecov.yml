@@ -1,2 +1,9 @@
-ignore:
-  - "request.py"
+codecov:
+  token: "fce46799-df15-4b8e-92f0-8219514bd996"
+  bot: "codecov-io"
+  strict_yaml_branch: "yaml-config"
+  max_report_age: 24
+  disable_default_path_fixes: no
+  require_ci_to_pass: no
+  notify:
+    wait_for_ci: no
