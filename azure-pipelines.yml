@@ -7,11 +7,11 @@ pool:
 steps:
 - script: |
     python -m pip install --upgrade pip
-    pip install pytest
-  displayName: 'Install pytest'
+    pip install coverage
+  displayName: 'Install coverage'
 
 - script: |
-    pytest --cov=./ --cov-report=xml
+    coverage run src/test_index.py
   displayName: 'Run tests'
 
 - script: |
